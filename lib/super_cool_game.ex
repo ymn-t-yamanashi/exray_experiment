@@ -7,8 +7,9 @@ defmodule SuperCoolGame do
   import Exray.Core.Drawing
   # We also need to import Exray.Core.Timing in order to set our FPS. This is VERY important.
   import Exray.Core.Timing
+  alias Exray.Shapes.Basic
 
-  def run(width \\ 200, height \\ 200, title \\ "Hello World!") do
+  def run(width \\ 800, height \\ 800, title \\ "Hello World!") do
     init_window(width, height, title)
     set_target_fps(60) # <-- SUPER important! Call this just after you init_window, or segfaults are gonna happen a lot.
     main_loop()
@@ -44,6 +45,7 @@ defmodule SuperCoolGame do
     begin_drawing()
 
     # Nothing yet!
+    Basic.draw_circle(100, 100, 100.0, Exray.Utils.Colors.lime)
 
     end_drawing()
   end
