@@ -44,8 +44,16 @@ defmodule SuperCoolGame do
     clear_background(Exray.Utils.Colors.black())
     begin_drawing()
 
-    # Nothing yet!
-    Basic.draw_circle(100, 100, 100.0, Exray.Utils.Colors.lime)
+    # 色を塗った円を描く
+    centerX = 100
+    centerY = 100
+    radius = 100.0
+    color1 = Exray.Utils.Colors.lime()
+    color2 = Exray.Utils.Colors.yellow()
+    # Basic.draw_circle(100, 100, 100.0, Exray.Utils.Colors.lime)
+
+    # グラデーションで塗りつぶされた円を描く
+    Basic.draw_circle_gradient(centerX, centerY, radius, color1, color2)
 
     end_drawing()
   end
