@@ -52,6 +52,9 @@ defmodule SuperCoolGame do
     color = Exray.Utils.Colors.lime()
     color1 = Exray.Utils.Colors.lime()
     color2 = Exray.Utils.Colors.yellow()
+    start_angle = 10.0
+    end_angle  = 90.0
+    segments = 0
 
     # 色を塗った円を描く
     # Basic.draw_circle(100, 100, 100.0, Exray.Utils.Colors.lime)
@@ -65,6 +68,8 @@ defmodule SuperCoolGame do
     # 円のアウトラインを描く（ベクター版）
     Basic.draw_circle_lines_v(center, radius, color)
 
+    # 円の一部を描く
+    Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
 
     end_drawing()
   end
