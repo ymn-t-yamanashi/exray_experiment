@@ -1,2 +1,2 @@
 #!/bin/sh
-mix run --eval "SuperCoolGame.run()"
+mix run --eval "$1.run()"
