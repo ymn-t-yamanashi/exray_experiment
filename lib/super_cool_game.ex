@@ -8,6 +8,7 @@ defmodule SuperCoolGame do
   # We also need to import Exray.Core.Timing in order to set our FPS. This is VERY important.
   import Exray.Core.Timing
   alias Exray.Shapes.Basic
+  alias Exray.Core.Input.Keyboard
 
   def run(width \\ 800, height \\ 800, title \\ "Hello World!") do
     init_window(width, height, title)
@@ -66,10 +67,14 @@ defmodule SuperCoolGame do
     # Basic.draw_circle_lines(centerX, centerY, radius, color)
 
     # 円のアウトラインを描く（ベクター版）
-    Basic.draw_circle_lines_v(center, radius, color)
+    # Basic.draw_circle_lines_v(center, radius, color)
 
     # 円の一部を描く
-    Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
+    # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
+
+    # 押された文字（Unicode）を取得し、キューに入れられた文字に対して複数回呼び出し、キューが空の場合は 0 を返します
+    Keyboard.get_char_pressed()
+    |> IO.inspect()
 
     end_drawing()
   end
