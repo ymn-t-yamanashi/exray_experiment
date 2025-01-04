@@ -6,7 +6,7 @@ defmodule SuperCoolGame do
   import Exray.Core.Drawing
   # We also need to import Exray.Core.Timing in order to set our FPS. This is VERY important.
   import Exray.Core.Timing
-  # alias Exray.Shapes.Basic
+  alias Exray.Shapes.Basic
   # alias Exray.Core.Input.Keyboard
   alias Exray.Textures.Texture.Drawing
 
@@ -55,7 +55,7 @@ defmodule SuperCoolGame do
     # centerY = 100
     # radius = 100.0
     # center = Exray.Structs.Vector2.new(100.0, 100.0)
-    # color = Exray.Utils.Colors.lime()
+    color = Exray.Utils.Colors.lime()
     # color1 = Exray.Utils.Colors.lime()
     # color2 = Exray.Utils.Colors.yellow()
     tint = Exray.Utils.Colors.white()
@@ -80,11 +80,14 @@ defmodule SuperCoolGame do
     # 円の一部を描く
     # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
 
+    # ピクセルを描く
+    Basic.draw_pixel(pos_x, pos_y, color)
+
     # 押された文字（Unicode）を取得し、キューに入れられた文字に対して複数回呼び出し、キューが空の場合は 0 を返します
     # Keyboard.get_char_pressed()
     # |> IO.inspect()
 
-    Drawing.draw_texture(texture, pos_x, pos_y, tint)
+    #Drawing.draw_texture(texture, pos_x, pos_y, tint)
 
     end_drawing()
   end
