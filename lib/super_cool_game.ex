@@ -9,8 +9,7 @@ defmodule SuperCoolGame do
   alias Exray.Shapes.Basic
   # alias Exray.Core.Input.Keyboard
   alias Exray.Textures.Texture.Drawing
-
-
+  alias Exray.Core.Input.Mouse
 
   def run(width \\ 800, height \\ 800, title \\ "Hello World!") do
     init_window(width, height, title)
@@ -81,13 +80,15 @@ defmodule SuperCoolGame do
     # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
 
     # ピクセルを描く
-    Basic.draw_pixel(pos_x, pos_y, color)
+    # Basic.draw_pixel(pos_x, pos_y, color)
 
     # 押された文字（Unicode）を取得し、キューに入れられた文字に対して複数回呼び出し、キューが空の場合は 0 を返します
     # Keyboard.get_char_pressed()
     # |> IO.inspect()
 
-    #Drawing.draw_texture(texture, pos_x, pos_y, tint)
+    # Drawing.draw_texture(texture, pos_x, pos_y, tint)
+    Mouse.get_mouse_y()
+    |> IO.inspect()
 
     end_drawing()
   end
