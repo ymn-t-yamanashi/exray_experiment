@@ -10,6 +10,7 @@ defmodule SuperCoolGame do
   # alias Exray.Core.Input.Keyboard
   alias Exray.Textures.Texture.Drawing
   alias Exray.Core.Input.Mouse
+  alias Exray.Text.Drawing, as: T
 
   def run(width \\ 800, height \\ 800, title \\ "Hello World!") do
     init_window(width, height, title)
@@ -46,9 +47,14 @@ defmodule SuperCoolGame do
   end
 
   defp draw(texture) do
+    # https://hexdocs.pm/exray/readme.html
+
     # Before drawing, we'll clear the background with the Exray.Utils.Colors.black function result- Which is %Exray.Structs.Color{r: 0, g: 0, b: 0, a: 255}.
     clear_background(Exray.Utils.Colors.black())
     begin_drawing()
+
+    text = "test"
+    font_size = 20
 
     # centerX = 100
     # centerY = 100
@@ -87,8 +93,18 @@ defmodule SuperCoolGame do
     # |> IO.inspect()
 
     # Drawing.draw_texture(texture, pos_x, pos_y, tint)
-    Mouse.get_mouse_y()
-    |> IO.inspect()
+    # Mouse.get_mouse_y()
+    # |> IO.inspect()
+
+    # フォント一覧コマンド
+    # $ fc-list
+
+    # 動作しなかった
+    # f_file_name = "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf"
+    # font = Exray.Text.Loading.load_font(f_file_name)
+    # position = Exray.Structs.Vector2.new(100.0, 100.0)
+    # spacing = 1.0
+    # T.draw_text_ex(font, text, position, font_size, spacing, tint)
 
     end_drawing()
   end
