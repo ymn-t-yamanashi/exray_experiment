@@ -56,13 +56,13 @@ defmodule SuperCoolGame do
     text = "test"
     font_size = 20
 
-    # centerX = 100
-    # centerY = 100
-    # radius = 100.0
-    # center = Exray.Structs.Vector2.new(100.0, 100.0)
+    centerX = 100
+    centerY = 100
+    radius = 100.0
+    center = Exray.Structs.Vector2.new(100.0, 100.0)
     color = Exray.Utils.Colors.lime()
-    # color1 = Exray.Utils.Colors.lime()
-    # color2 = Exray.Utils.Colors.yellow()
+    color1 = Exray.Utils.Colors.lime()
+    color2 = Exray.Utils.Colors.yellow()
     tint = Exray.Utils.Colors.white()
     pos_x = 100
     pos_y = 100
@@ -80,7 +80,7 @@ defmodule SuperCoolGame do
     # Basic.draw_circle_lines(centerX, centerY, radius, color)
 
     # 円のアウトラインを描く（ベクター版）
-    # Basic.draw_circle_lines_v(center, radius, color)
+    Basic.draw_circle_lines_v(center, radius, color)
 
     # 円の一部を描く
     # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
@@ -105,6 +105,14 @@ defmodule SuperCoolGame do
     # position = Exray.Structs.Vector2.new(100.0, 100.0)
     # spacing = 1.0
     # T.draw_text_ex(font, text, position, font_size, spacing, tint)
+
+    # 動作しなかった
+    # inner_radius = 1.0
+    # outer_radius = 1.5
+    # start_angle = 1.0
+    # end_angle = 1.5
+    # segments = 1
+    # Basic.draw_ring(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
 
     end_drawing()
   end
