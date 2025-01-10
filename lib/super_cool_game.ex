@@ -11,6 +11,7 @@ defmodule SuperCoolGame do
   alias Exray.Textures.Texture.Drawing
   alias Exray.Core.Input.Mouse
   alias Exray.Text.Drawing, as: T
+  alias Exray.Shapes.Spline
 
   def run(width \\ 800, height \\ 800, title \\ "Hello World!") do
     init_window(width, height, title)
@@ -60,12 +61,14 @@ defmodule SuperCoolGame do
     centerY = 100
     radius = 100.0
     center = Exray.Structs.Vector2.new(100.0, 100.0)
+    points = Exray.Structs.Vector2.new(100.0, 100.0)
     color = Exray.Utils.Colors.lime()
     color1 = Exray.Utils.Colors.lime()
     color2 = Exray.Utils.Colors.yellow()
     tint = Exray.Utils.Colors.white()
     pos_x = 100
     pos_y = 100
+    thick = 0.1
     # start_angle = 10.0
     # end_angle = 90.0
     # segments = 0
@@ -113,6 +116,9 @@ defmodule SuperCoolGame do
     # end_angle = 1.5
     # segments = 1
     # Basic.draw_ring(center, inner_radius, outer_radius, start_angle, end_angle, segments, color)
+
+    # 動作しなかった
+    #Spline.draw_spline_basis(points, thick, color)
 
     end_drawing()
   end
