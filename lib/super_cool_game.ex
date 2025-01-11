@@ -83,7 +83,7 @@ defmodule SuperCoolGame do
     # Basic.draw_circle_lines(centerX, centerY, radius, color)
 
     # 円のアウトラインを描く（ベクター版）
-    Basic.draw_circle_lines_v(center, radius, color)
+    # Basic.draw_circle_lines_v(center, radius, color)
 
     # 円の一部を描く
     # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
@@ -119,6 +119,11 @@ defmodule SuperCoolGame do
 
     # 動作しなかった
     #Spline.draw_spline_basis(points, thick, color)
+
+    min = 10
+    max = 20
+    Exray.Core.Random.get_random_value(min, max)
+    |> IO.inspect()
 
     end_drawing()
   end
