@@ -120,10 +120,15 @@ defmodule SuperCoolGame do
     # 動作しなかった
     #Spline.draw_spline_basis(points, thick, color)
 
-    min = 10
-    max = 20
-    Exray.Core.Random.get_random_value(min, max)
-    |> IO.inspect()
+    # min = 10
+    # max = 20
+    # Exray.Core.Random.get_random_value(min, max)
+    # |> IO.inspect()
+
+    # 垂直グラデーションの四角形を描く
+    width = 100
+    height = 100
+    Basic.draw_rectangle_gradient_v(pos_x, pos_y, width, height, color1, color2)
 
     end_drawing()
   end
