@@ -126,9 +126,15 @@ defmodule SuperCoolGame do
     # |> IO.inspect()
 
     # 垂直グラデーションの四角形を描く
-    width = 100
-    height = 100
-    Basic.draw_rectangle_gradient_v(pos_x, pos_y, width, height, color1, color2)
+    #width = 100
+    #height = 100
+    #Basic.draw_rectangle_gradient_v(pos_x, pos_y, width, height, color1, color2)
+
+    sides = 5
+    rotation = 1.0
+
+    # 正多角形を描く（ベクター版）
+    Basic.draw_poly(center, sides, radius, rotation, color)
 
     end_drawing()
   end
