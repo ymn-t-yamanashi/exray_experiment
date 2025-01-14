@@ -134,7 +134,15 @@ defmodule SuperCoolGame do
     rotation = 1.0
 
     # 正多角形を描く（ベクター版）
-    Basic.draw_poly(center, sides, radius, rotation, color)
+    #Basic.draw_poly(center, sides, radius, rotation, color)
+
+
+    v1 = Exray.Structs.Vector2.new(50.0, 50.0)
+    v2 = Exray.Structs.Vector2.new(10.0, 100.0)
+    v3 = Exray.Structs.Vector2.new(150.0, 100.0)
+
+    # 色で塗りつぶされた三角形を描きます（頂点は反時計回りの順序です）
+    Basic.draw_triangle(v1, v2, v3, color)
 
     end_drawing()
   end
