@@ -69,9 +69,9 @@ defmodule SuperCoolGame do
     pos_x = 100
     pos_y = 100
     thick = 0.1
-    # start_angle = 10.0
-    # end_angle = 90.0
-    # segments = 0
+    start_angle = 10.0
+    end_angle = 90.0
+    segments = 0
 
     # 色を塗った円を描く
     # Basic.draw_circle(100, 100, 100.0, Exray.Utils.Colors.lime)
@@ -87,6 +87,10 @@ defmodule SuperCoolGame do
 
     # 円の一部を描く
     # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
+
+    # 円弧の輪郭を描く
+    Basic.draw_circle_sector_lines(center, radius, start_angle, end_angle, segments, color)
+
 
     # ピクセルを描く
     # Basic.draw_pixel(pos_x, pos_y, color)
@@ -142,7 +146,7 @@ defmodule SuperCoolGame do
     v3 = Exray.Structs.Vector2.new(150.0, 100.0)
 
     # 色で塗りつぶされた三角形を描きます（頂点は反時計回りの順序です）
-    Basic.draw_triangle(v1, v2, v3, color)
+    # Basic.draw_triangle(v1, v2, v3, color)
 
     end_drawing()
   end
