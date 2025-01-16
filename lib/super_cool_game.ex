@@ -89,7 +89,7 @@ defmodule SuperCoolGame do
     # Basic.draw_circle_sector(center, radius, start_angle, end_angle, segments, color)
 
     # 円弧の輪郭を描く
-    Basic.draw_circle_sector_lines(center, radius, start_angle, end_angle, segments, color)
+    # Basic.draw_circle_sector_lines(center, radius, start_angle, end_angle, segments, color)
 
 
     # ピクセルを描く
@@ -147,6 +147,15 @@ defmodule SuperCoolGame do
 
     # 色で塗りつぶされた三角形を描きます（頂点は反時計回りの順序です）
     # Basic.draw_triangle(v1, v2, v3, color)
+
+    # 点によって定義される三角形の扇形を描きます（最初の頂点が中心になります）
+    # 動作しなかった
+    # c = Exray.Structs.Vector2.new(100.0, 100.0)
+    # p1 = Exray.Structs.Vector2.new(10.0, 10.0)
+    # p2 = Exray.Structs.Vector2.new(200.0, 200.0)
+    # p3 = Exray.Structs.Vector2.new(300.0, 300.0)
+    # points = [c, p1, p2, p3]
+    #Basic.draw_triangle_fan(points, color)
 
     end_drawing()
   end
